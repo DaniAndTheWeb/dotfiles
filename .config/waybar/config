@@ -1,0 +1,100 @@
+{
+	"position": "top",
+	"height": 35,
+	"modules-left": ["sway/workspaces"],
+	"modules-center": ["sway/window"],
+	"modules-right": ["tray", "idle_inhibitor", "custom/sunset", "network", "bluetooth", "pulseaudio", "backlight", "battery", "clock"],
+
+	"sway/workspaces": {
+	"format": "{name}",
+	},
+    
+"tray":{
+	"spacing": 10,
+},
+
+"idle_inhibitor": {
+	"format": "{icon}",
+	"format-icons": {
+		"activated": "",
+		"deactivated": ""
+	}
+},
+
+"custom/sunset": {
+	"interval": "once",
+	"tooltip": false,
+	"return-type": "json",
+	"format" : "{icon}",
+	"format-icons": {
+		"on": "" ,
+		"off": ""
+	},
+	"exec": "~/.config/sway/scripts/sunset.sh",
+	"on-click": "~/.config/sway/scripts/sunset.sh toggle; pkill -RTMIN+6 waybar",
+	"exec-if": "~/.config/sway/scripts/sunset.sh check",
+	"signal": 6
+},
+
+"network": {
+	"format-wifi": "",
+	"format": "{essid} ({signalStrength}%)",
+	"format-ethernet": "",
+	"format-linked": "",
+	"format-disconnected": " ",
+	"on-click": "alacritty -e 'nmtui'",
+},
+
+"bluetooth": {
+	"format": "{icon}",
+	"format-icons": {
+		"enabled": "",
+		"disabled": " ",
+	},
+	"on-click": "blueman-manager",
+},
+
+"pulseaudio": {
+	"format": "{volume}% {icon}",
+	"format-bluetooth": "{volume}% {icon}",
+	"format-bluetooth-muted": " {icon}",
+	"format-muted": "",
+	"format-icons": {
+		"headphone": "",
+		"hands-free": "",
+		"headset": "",
+		"phone": "",
+		"portable": "",
+		"car": "",
+		"default": ["", "", ""]
+	},
+	"on-click": "pavucontrol"
+},
+
+"backlight": {
+	"format": "{percent}% {icon}",
+	"format-icons": [""],
+	"on-scroll-down": "brightnessctl -c backlight set 1%-",
+	"on-scroll-up": "brightnessctl -c backlight set +1%"
+},
+
+"battery": {
+	"states": {
+		// "good": 95,
+		"warning": 30,
+		"critical": 15
+	},
+	"format": "{capacity}% {icon}",
+	"format-charging": "{capacity}% ",
+	"format-plugged": "{capacity}% ",
+	"format-alt": "{time} {icon}",
+	"format-icons": ["", "", "", "", ""]
+},
+
+"clock": {
+	"format": "{:%H:%M} ",
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format-alt": "{:%Y-%m-%d} "
+},
+
+}

@@ -1,0 +1,51 @@
+@define-color highlight #6f6f6f;
+@define-color base1  #1a1a1a;
+@define-color base2 #2b2b2b;
+@define-color border #ffffff;
+
+*{
+font-family: Roboto;
+}
+
+window {
+	border: 2px solid @border;
+	border-radius: 15px;
+}
+
+#input {
+	background-color: @base2;
+	margin-bottom: 15px;
+	padding:3px;
+	border-radius: 5px;
+	border-color: @border;
+	color: white;
+}
+
+#inner-box {
+	background-color: @base2;
+}
+
+#outer-box {
+	margin: 5px;
+	padding:15px;
+	background-color: @base1;
+}
+
+#scroll {
+}
+
+#text {
+	padding: 5px;
+	color: white;
+}
+
+#entry:nth-child(even){
+	background-color: @base1;
+}
+
+#entry:selected {
+	background-color: @highlight;
+}
+
+#text:selected {
+}
