@@ -29,6 +29,7 @@ After copying all the files inside the ".config" folder remember to set the exec
 - [pavucontrol](https://gitlab.freedesktop.org/pulseaudio/pavucontrol) (volume control panel)
 - [blueman](https://github.com/blueman-project/blueman) (bluetooth manager)
 - [networkmanager](https://gitlab.freedesktop.org/NetworkManager/NetworkManager) (network manager)
+- [grim](https://github.com/emersion/grim) (screenshot utility)
 
 ## Fonts
 
