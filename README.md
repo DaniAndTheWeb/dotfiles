@@ -6,6 +6,10 @@ Explore the repo and if you have any questions, comments or suggestions, feel fr
 
 I must give credits to the awesome [EndeavourOS Community Edition](https://github.com/EndeavourOS-Community-Editions/sway) for their awesome sway configuration that has been the base for my personal one.
 
+![screenshot](https://raw.githubusercontent.com/DaniAndTheWeb/dotfiles/main/screenshots/clean.png)
+![screenshot](https://raw.githubusercontent.com/DaniAndTheWeb/dotfiles/main/screenshots/wofi.png)
+![screenshot](https://raw.githubusercontent.com/DaniAndTheWeb/dotfiles/main/screenshots/neofetch.png)
+
 ## Configuration
 After copying all the files inside the ".config" folder remember to set the execute permission for all the contents inside "~/.config/sway/scripts/" as it is necessary to enable the gtk theming and the gamma controller.
 
